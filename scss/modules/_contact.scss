@@ -6,7 +6,7 @@
         .contact-details {
             background: transparent;
             text-align: left;
-            padding: 20px 0;
+
             @include breakpoint(xs-all) {
                 padding: 20px 20px;
             }

@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+
     .mask-hero {
         background-image: url(../images/hero.jpg);
         background-color: red;
@@ -24,18 +25,45 @@
         margin: 0 auto;
         text-align: center;
         h1 {
+            display: inline-block;
+            @include font("OpenSans-Bold", 65px, $black-1, normal);
             background-color: $cor-primaria;
             display: inline-block;
-            line-height: 30px;
+            line-height: 60px;
             margin: 20px 0;
             padding: 20px;
+
+            @include tablet {
+                font-size: 40px;
+                margin: 10px 0;
+            }
+            @include mobile {
+                font-size: 40px;
+                margin: 10px 0;
+            line-height: 40px;
+            }
         }
         h2 {
+            @include font("OpenSans-Light", 25px, $black-1, normal);
             color: #fff;
             margin: 10px 0;
+            @include tablet {
+                font-size: 20px;
+                margin: 5px 0;
+            }
+            @include mobile {
+                font-size: 20px;
+                margin: 5px 0;
+            }
         }
         .btn {
             margin: 40px 0;
+            @include tablet {
+                margin: 10px 0;
+            }
+            @include mobile {
+                margin: 10px 0;
+            }
         }
     }
     .hero-down {
@@ -49,6 +77,14 @@
         animation: hero-down 2s infinite;
         cursor: pointer;
         padding: 20px;
+            @include tablet {
+                bottom: 10px;
+        animation: hero-down-mob 2s infinite;
+            }
+            @include mobile {
+                bottom: 5px;
+        animation: hero-down-mob 2s infinite;
+            }
     }
     #hero-end {
         position: absolute;
@@ -66,4 +102,16 @@
     0% {bottom: 30px;}
     50% {bottom: 50px;}
     100% {bottom: 30px;}
+}
+
+@-webkit-keyframes hero-down-mob {
+    0% {bottom: 0px;}
+    50% {bottom: 20px;}
+    100% {bottom: 0px;}
+}
+
+@keyframes hero-down-mob {
+    0% {bottom: 0px;}
+    50% {bottom: 20px;}
+    100% {bottom: 0px;}
 }

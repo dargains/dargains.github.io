@@ -29,6 +29,9 @@
     <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
     <!--    Font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- animate.css    -->
+    <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+
 
     <script>
         (function (b, o, i, l, e, r) {
@@ -52,19 +55,23 @@
 
     <header>
         <span class="menu_toggle">
+
             <i class="menu_open fa fa-bars fa-lg"></i>
             <i class="menu_close fa fa-times fa-lg"></i>
+
             <i class="menu_open fa fa-bars fa-lg"></i>
             <i class="menu_close fa fa-times fa-lg"></i>
+
         </span>
         <nav>
             <ul class="menu_items">
-                <li><a href="#"><i class="icon fa fa-signal fa-2x"></i> Moar</a></li>
-                <li><a href="#"><i class="icon fa fa-coffee fa-2x"></i> Coffee</a></li>
-                <li><a href="#"><i class="icon fa fa-heart fa-2x"></i> Please</a></li>
+                <li id="menu-about"><a href="#"><i class="icon fa fa-signal fa-2x"></i>Sobre nós</a></li>
+                <li id="menu-portfolio"><a href="#"><i class="icon fa fa-coffee fa-2x"></i>Portfólio</a></li>
+                <li id="menu-contact"><a href="#"><i class="icon fa fa-heart fa-2x"></i> Contato</a></li>
             </ul>
         </nav>
     </header>
+
 
     <div class="content">
         <!-- HERO START -->
@@ -80,8 +87,9 @@
         </section>
         <!-- HERO END -->
 
-        <!-- ABOUT START -->
+        <!--         ABOUT START -->
         <section class="about">
+            <span id="about-start"></span>
             <section class="title-subtitle">
                 <div class="container">
                     <div class="row">
@@ -91,12 +99,14 @@
                         <div class="right-block col-sm-6 col-xs-12">
                             <h2>Somos uma equipa de desevolvedores localizados em Lisboa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vero!</h2>
                         </div>
+
                     </div>
+
                 </div>
             </section>
-
             <section class="pros">
                 <div class="container">
+                    <!-- (article>div>i+h1{Hello}+p{Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.})*4-->
                     <div class="row">
                         <article class="col-md-3 col-sm-6">
                             <div>
@@ -105,6 +115,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
                             </div>
                         </article>
+
                         <article class="col-md-3 col-sm-6">
                             <div>
                                 <i class="fa fa-camera-retro fa-4x"></i>
@@ -112,6 +123,8 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
                             </div>
                         </article>
+
+
                         <article class="col-md-3 col-sm-6">
                             <div>
                                 <i class="fa fa-camera-retro fa-4x"></i>
@@ -119,6 +132,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
                             </div>
                         </article>
+
                         <article class="col-md-3 col-sm-6">
                             <div>
                                 <i class="fa fa-camera-retro fa-4x"></i>
@@ -129,7 +143,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="quote">
                 <div class="container">
                     <div class="row">
@@ -137,118 +150,140 @@
                             <h1>We grow brands by making decisions that are rooted in business strategy.</h1>
                             <a href="" class="btn btn-primary btn-primary-black">Let's work together</a>
                         </div>
+
                     </div>
+
                 </div>
             </section>
         </section>
 
+
+
         <!-- PORTFOLIO START -->
         <section class="portfolio">
-        <div class="article-wrapper">
-            <article class="itemPortfolio">
-                <figure>
-                    <img src="../images/template1.jpg" alt="">
-                    <div class="subtitle">
-                        <h3 class="primaria">Imagem 1</h3>
-                        <p>Subtitle da imagem</p>
-                    </div>
-                </figure>
-            </article>
-            <article class="itemPortfolio">
-                <figure>
-                    <img src="../images/template2.jpg" alt="">
-                    <div class="subtitle">
-                        <h3 class="primaria">Imagem 2</h3>
-                        <p>Subtitle da imagem</p>
-                    </div>
-                </figure>
-            </article>
-            <article class="itemPortfolio">
-                <figure>
-                    <img src="../images/template3.jpg" alt="">
-                    <div class="subtitle">
-                        <h3 class="primaria">Imagem 3</h3>
-                        <p>Subtitle da imagem</p>
-                    </div>
-                </figure>
-            </article>
-            <article class="itemPortfolio">
-                <figure>
-                    <img src="../images/template4.jpg" alt="">
-                    <div class="subtitle">
-                        <h3 class="primaria">Imagem 4</h3>
-                        <p>Subtitle da imagem</p>
-                    </div>
-                </figure>
-            </article>
-        </div>
-    </section>
 
-    <section class="popupPortfolio">
-        <div class="popupPortfolio1">
-            <div class="popup-esq">
-                <img src="../images/template1.jpg" alt="">
-            </div>
-            <div class="popup-dir">
-                <div class="wrapper-pop-text">
-                    <h1>Imagem 1</h1>
-                    <h2>Product industry - Lorem ipsum</h2>
-                    <p class="popup-tags">Web development + mobile website</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
-                </div>
-                <span class="closePortfolio">X</span>
-            </div>
-        </div>
-        <div class="popupPortfolio2">
-            <div class="popup-esq">
-                <img src="../images/template2.jpg" alt="">
-            </div>
-            <div class="popup-dir">
-                <div class="wrapper-pop-text">
-                    <h1>Imagem 2</h1>
-                    <h2>Product industry - Lorem ipsum</h2>
-                    <p class="popup-tags">Web development + mobile website</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
-                </div>
-                <span class="closePortfolio">X</span>
-            </div>
-        </div>
-        <div class="popupPortfolio3">
-            <div class="popup-esq">
-                <img src="../images/template3.jpg" alt="">
-            </div>
-            <div class="popup-dir">
-                <div class="wrapper-pop-text">
-                    <h1>Imagem 3</h1>
-                    <h2>Product industry - Lorem ipsum</h2>
-                    <p class="popup-tags">Web development + mobile website</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
-                </div>
-                <span class="closePortfolio">X</span>
-            </div>
-        </div>
-        <div class="popupPortfolio4">
-            <div class="popup-esq">
-                <img src="../images/template4.jpg" alt="">
-            </div>
+            <section class="title-subtitle">
+                <div class="container">
+                    <div class="row">
+                        <div class="left-block col-sm-6 col-xs-12">
+                            <h1>Portfólio</h1>
+                        </div>
+                        <div class="right-block col-sm-6 col-xs-12">
+                            <h2>Nossos trabalhos mais recentes Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium neque porro tempore facere, culpa vel.</h2>
+                        </div>
 
-            <div class="popup-dir">
-                <div class="wrapper-pop-text">
-                    <h1>Imagem 4</h1>
-                    <h2>Product industry - Lorem ipsum</h2>
-                    <p class="popup-tags">Web development + mobile website</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
+                    </div>
+
                 </div>
-                <span class="closePortfolio">X</span>
+            </section>
+
+            <div class="article-wrapper">
+                <article class="itemPortfolio">
+                    <figure>
+                        <img src="images/template1.jpg" alt="">
+                        <div class="subtitle">
+                            <h3 class="primaria">Imagem 1</h3>
+                            <p>Subtitle da imagem</p>
+                        </div>
+                    </figure>
+                </article>
+                <article class="itemPortfolio">
+                    <figure>
+                        <img src="images/template2.jpg" alt="">
+                        <div class="subtitle">
+                            <h3 class="primaria">Imagem 2</h3>
+                            <p>Subtitle da imagem</p>
+                        </div>
+                    </figure>
+                </article>
+                <article class="itemPortfolio">
+                    <figure>
+                        <img src="images/template3.jpg" alt="">
+                        <div class="subtitle">
+                            <h3 class="primaria">Imagem 3</h3>
+                            <p>Subtitle da imagem</p>
+                        </div>
+                    </figure>
+                </article>
+                <article class="itemPortfolio">
+                    <figure>
+                        <img src="images/template4.jpg" alt="">
+                        <div class="subtitle">
+                            <h3 class="primaria">Imagem 4</h3>
+                            <p>Subtitle da imagem</p>
+                        </div>
+                    </figure>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <setion class="popupPortfolio">
+            <div class="popupPortfolio1">
+                <div class="popup-esq">
+                    <img src="images/template1.jpg" alt="">
+                </div>
+                <div class="popup-dir">
+                    <div class="wrapper-pop-text">
+                        <h1>Imagem 1</h1>
+                        <h2>Product industry - Lorem ipsum</h2>
+                        <p class="popup-tags">Web development + mobile website</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
+                    </div>
+                    <span class="closePortfolio">X</span>
+                </div>
+            </div>
+            <div class="popupPortfolio2">
+                <div class="popup-esq">
+                    <img src="images/template2.jpg" alt="">
+                </div>
+                <div class="popup-dir">
+                    <div class="wrapper-pop-text">
+                        <h1>Imagem 2</h1>
+                        <h2>Product industry - Lorem ipsum</h2>
+                        <p class="popup-tags">Web development + mobile website</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
+                    </div>
+                    <span class="closePortfolio">X</span>
+                </div>
+            </div>
+            <div class="popupPortfolio3">
+                <div class="popup-esq">
+                    <img src="images/template3.jpg" alt="">
+                </div>
+                <div class="popup-dir">
+                    <div class="wrapper-pop-text">
+                        <h1>Imagem 3</h1>
+                        <h2>Product industry - Lorem ipsum</h2>
+                        <p class="popup-tags">Web development + mobile website</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
+                    </div>
+                    <span class="closePortfolio">X</span>
+                </div>
+            </div>
+            <div class="popupPortfolio4">
+                <div class="popup-esq">
+                    <img src="images/template4.jpg" alt="">
+                </div>
+
+                <div class="popup-dir">
+                    <div class="wrapper-pop-text">
+                        <h1>Imagem 4</h1>
+                        <h2>Product industry - Lorem ipsum</h2>
+                        <p class="popup-tags">Web development + mobile website</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum quis, doloremque harum numquam hic illo nemo, rem dicta vel nisi ipsam adipisci provident dolor cupiditate incidunt cum minus! At.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores fuga, itaque minima, delenti animi commodi tempora. Quidem fuga quia dicta minus consequatur dolorem presentium reprehenderit, numquam, commodi ratione! Minus.</p>
+                    </div>
+                    <span class="closePortfolio">X</span>
+                </div>
+            </div>
+        </setion>
+        <!-- PORTFOLIO END -->
 
         <section class="contact">
+            <span id="contact-start"></span>
             <div class="container">
                 <div class="row">
                     <div class="contact-details col-md-6 col-xs-6">
@@ -256,18 +291,21 @@
                             <h1>How to reach us</h1>
                             <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
                         </article>
+
                         <article>
                             <h1>Nosso Endereço</h1>
                             <address>Sturlly Technologies <br/>
                             PO Box 16122, Collins Street West, <br/>
                             Victoria 8007, United States.</address>
                         </article>
+
                         <ul>
                             <li><i class="fa fa-phone"></i><span class="align-fix">123123123123</span></li>
                             <li><i class="fa fa-envelope"></i><a href="#"><span>123123123123</span></a></li>
                             <li><i class="fa fa-skype"></i><a href="#"><span class="align-fix">1239712371</span></a></li>
                         </ul>
                     </div>
+
                     <form class="send-message col-md-6 col-xs-6">
                         <input type="text" name="nome" placeholder="Teu nome *">
                         <input type="email" name="nome" placeholder="Teu e-mail *">
@@ -277,12 +315,30 @@
                 </div>
             </div>
         </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="animated ">Feito com</p>
+                        <div class="heart click-heart"></div>
+                        <p class="animated ">por <a href="#">name</a> :)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
-    <!-- PORTFOLIO END -->
+
+
+
+
 
     <!--SCRIPT-->
     <script type="text/javascript" src="scripts/vendor/jquery-2.1.4.min.js"></script>
+    <!-- <script type="text/javascript" src="snap.min.js"></script> -->
     <script src="scripts/main.js"></script>
+
 </body>
 
 </html>
