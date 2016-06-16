@@ -1,0 +1,45 @@
+.pros {
+    width: 100%;
+    background: $bg;
+    .container {
+        article {
+            border-right: 1px solid $gray-1;
+            border-bottom: 1px solid $gray-1;
+            @include breakpoint(sm) {
+                border-bottom: 1px solid $gray-1;
+                
+                &:nth-child(2) {
+                    border-right: none;
+                }
+            }
+            @include breakpoint(xs-all) {
+                border-bottom: 1px solid $gray-1;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+            div {
+                padding: 0;
+                margin: 0 10px;
+                margin-top: 60px;
+                margin-bottom: 80px;
+                text-align: center;
+                i {
+                    padding-bottom: 30px;
+                }
+                h1 {
+                    @include font("Oswald-Light", 28px, $black-1, normal);
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    padding-bottom: 15px;
+                }
+                p {
+                    line-height: 160%;
+                    @include font("OpenSans-Regular", 14px, $black-3, normal);
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}

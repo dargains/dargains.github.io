@@ -1,0 +1,55 @@
+.title-subtitle {
+    background: $bg;
+    overflow: hidden;
+    .container {
+        border-bottom: 1px solid $gray-1;
+        //
+        .left-block,
+        .right-block {
+            display: inline-block;
+        }
+        .left-block {
+            border-right: 1px solid $gray-1;
+            h1 {
+                @include font("Oswald-Light", 90px, $black-1, normal);
+                text-transform: uppercase;
+                text-align: center;
+                @include breakpoint(sm) {
+                    font-size: 75px;
+                    padding-top: 5px;
+                    padding-right: 30px;
+                }
+                @include breakpoint(xs-all) {
+                    font-size: 65px;
+                    margin: 0;
+                    padding: 20px 0;
+                    padding-top: 40px;
+                }
+
+
+            }
+        }
+        .right-block {
+            h2 {
+                padding-left: 40px;
+                padding-top: 80px;
+                width: 100%;
+                @include font("OpenSans-Regular", 18px, $black-3, normal);
+                text-align: left;
+                @include breakpoint(sm) {
+                    padding-top: 40px;
+                }
+                @include breakpoint(xs) {
+                    padding: 20px 0;
+                    text-align: center;
+                }
+                @include breakpoint(xxs-all) {
+                    margin: 0;
+                    padding: 20px 0;
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+}

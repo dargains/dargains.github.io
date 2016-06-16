@@ -1,0 +1,27 @@
+sections:
+hero, about , portfolio e contato
+
+~~
+
+hero: 
+
+um hero full screen com uma seta indicando para descer para a próxima section.
+
+~~
+
+Portfolio: 
+
+exibir os websites dessa forma: http://pt.wix.com/website/templates
+
+e adicionar um "auto-scroll" dessa forma:
+http://themeforest.net/item/sturlly-responsive-one-page-multipurpose-template/full_screen_preview/10019456
+
+~~ 
+
+boilerplate c/ grid do bootstrap
+com sass
+
+~~~~~~~~~~~~~~~
+
+git add .
+git commit -m 

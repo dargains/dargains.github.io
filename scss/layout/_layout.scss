@@ -1,0 +1,153 @@
+//mixins
+@mixin font($ffamily, $fsize, $color, $fw) {
+    font-family: $ffamily;
+    font-size: $fsize;
+    color: $color;
+    font-weight: $fw;
+}
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+        //url('#{$file-path}.woff') format('woff'),
+        url('#{$file-path}.ttf') format('truetype'),
+        url('#{$file-path}.svg##{$font-family}') format('svg');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+//responsive
+$mobile: 512px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+@mixin mobile {
+    @media (min-width: 0px) and (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile+1px}) and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: #{$tablet+1px}) and (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$laptop+1px}) and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+//Bootstrap breakpoints
+@mixin breakpoint($point) {
+    @if ($point==lg) {
+        @media (min-width: 1200px) {
+            @content
+        }
+    }
+    @else if ($point==md) {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content
+        }
+    }
+    @else if ($point==sm) {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content
+        }
+    }
+    @else if ($point==xs) {
+        @media (max-width: 767px) and (min-width: 641px) {
+            @content
+        }
+    }
+    @else if ($point==xxs) {
+        @media (max-width: 640px) and (min-width: 481px) {
+            @content
+        }
+    }
+    @else if ($point==xxxs) {
+        @media (max-width: 480px) {
+            @content
+        }
+    }
+    @else if ($point==xs-all) {
+        @media (max-width: 767px) {
+            @content
+        }
+    }
+    @else if ($point==xxs-all) {
+        @media (max-width: 640px) {
+            @content
+        }
+    }
+}
+
+//reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    position: relative;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1130px;
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    @include font("OpenSans-Bold", 16px, $gray-1, normal);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    &:hover{
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(255,255,255,.4);
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content{
+    height: 100%;
+}

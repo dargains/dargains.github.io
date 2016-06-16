@@ -1,0 +1,702 @@
+@charset "UTF-8";
+/* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_cores.scss */
+.primaria {
+  color: red; }
+
+/* line 9, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_cores.scss */
+.secundaria {
+  color: blue; }
+
+/* line 102, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  position: relative;
+  list-style: none; }
+
+/* line 111, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+html,
+body {
+  height: 100%; }
+
+/* line 116, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+h1 {
+  text-transform: uppercase; }
+
+/* line 120, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+.wrapper {
+  margin: 0 auto;
+  width: 1130px;
+  overflow: hidden; }
+
+/* line 126, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+.btn {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "OpenSans-Bold";
+  font-size: 16px;
+  color: #e5e5e5;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out; }
+  /* line 136, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+  .btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.4); }
+
+/* line 143, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+address {
+  font-style: normal; }
+
+/* line 147, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+a {
+  text-decoration: none; }
+
+/* line 151, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/layout/_layout.scss */
+.content {
+  height: 100%; }
+
+@font-face {
+  font-family: Oswald-Light;
+  src: url("../fonts/Oswald/Oswald-Light.eot");
+  src: url("../fonts/Oswald/Oswald-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Oswald/Oswald-Light.ttf") format("truetype"), url("../fonts/Oswald/Oswald-Light.svg#Oswald-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: Oswald-Regular;
+  src: url("../fonts/Oswald/Oswald-Regular.eot");
+  src: url("../fonts/Oswald/Oswald-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype"), url("../fonts/Oswald/Oswald-Regular.svg#Oswald-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: OpenSans-Light;
+  src: url("../fonts/OpenSans/OpenSans-Light.eot");
+  src: url("../fonts/OpenSans/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Light.svg#OpenSans-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("../fonts/OpenSans/OpenSans-Regular.eot");
+  src: url("../fonts/OpenSans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Regular.svg#OpenSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("../fonts/OpenSans/OpenSans-Bold.eot");
+  src: url("../fonts/OpenSans/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 9, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+.content {
+  transform-origin: top left;
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+
+/* line 21, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+.menu_toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: #F37272;
+  border-bottom-right-radius: 100%; }
+  /* line 34, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .menu_toggle:active i {
+    opacity: 0.8; }
+  /* line 38, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .menu_toggle i {
+    color: #f0f0f0; }
+  /* line 42, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .menu_toggle .menu_open,
+  .menu_toggle .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+  /* line 50, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .menu_toggle .menu_open {
+    transform-origin: -100px -100px; }
+  /* line 53, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .menu_toggle .menu_close {
+    transform: rotate(20deg);
+    transform-origin: -100px -160px; }
+
+/* line 58, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  /* line 66, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .menu_items li {
+    height: 60px;
+    margin-bottom: 30px;
+    transform: translateX(-300px);
+    transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1); }
+    /* line 72, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+    .menu_items li:nth-child(2) {
+      margin-left: 40px; }
+    /* line 75, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+    .menu_items li:nth-child(3) {
+      margin-left: 80px; }
+  /* line 79, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .menu_items a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a3a3a3;
+    transition: color 0.2s; }
+    /* line 87, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+    .menu_items a .icon {
+      position: relative;
+      display: inline-block;
+      margin-right: 25px;
+      color: #f0f0f0; }
+      /* line 93, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+      .menu_items a .icon:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin-left: -33px;
+        margin-top: -32px;
+        border-radius: 100%;
+        border: 2px solid #f0f0f0;
+        transition: border-color 0.2s; }
+    /* line 109, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+    .menu_items a:hover {
+      color: #f0f0f0; }
+      /* line 112, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+      .menu_items a:hover .icon:after {
+        border-color: #F37272; }
+    /* line 118, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+    .menu_items a:active .icon {
+      color: #F37272; }
+
+/* Let's open up the menu */
+/* line 127, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+.shazam {
+  /*.content_inner {
+    height: 100%;
+  }*/ }
+  /* line 128, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .shazam .content {
+    transform: rotate(-80deg); }
+  /* line 141, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .shazam .menu_open {
+    transform: rotate(-20deg); }
+  /* line 144, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .shazam .menu_close {
+    transform: rotate(0); }
+  /* line 150, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+  .shazam .menu_items li {
+    transform: translateX(0);
+    transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    /* line 154, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+    .shazam .menu_items li:nth-child(2) {
+      transition-delay: .47s; }
+    /* line 157, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+    .shazam .menu_items li:nth-child(3) {
+      transition-delay: .48s; }
+
+/* line 164, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_header.scss */
+.single.shazam {
+  overflow: hidden; }
+
+/* line 1, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+.contact {
+  background: #f6f6f6;
+  padding: 40px 0;
+  overflow: hidden; }
+  /* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+  .contact .container {
+    /* ------ FORM ----*/ }
+    /* line 6, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+    .contact .container .contact-details {
+      background: transparent;
+      text-align: left;
+      padding: 20px 0; }
+      @media (max-width: 767px) {
+        /* line 6, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .contact-details {
+          padding: 20px 20px; } }
+      @media (max-width: 640px) {
+        /* line 6, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .contact-details {
+          width: 100%;
+          text-align: center; } }
+      /* line 17, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .contact-details h1 {
+        font-family: "OpenSans-Bold";
+        font-size: 15px;
+        color: #373737;
+        font-weight: normal;
+        margin-top: 0; }
+      @media (max-width: 767px) and (min-width: 641px) {
+        /* line 21, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .contact-details h2 {
+          width: 80%; } }
+      /* line 27, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .contact-details h2,
+      .contact .container .contact-details address {
+        font-family: "OpenSans-Regular";
+        font-size: 13px;
+        color: #5e5e5e;
+        font-weight: normal;
+        margin: 10px 0;
+        line-height: 160%; }
+      /* line 32, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .contact-details article.reach-us {
+        margin-bottom: 60px; }
+      /* line 35, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .contact-details address {
+        margin-bottom: 60px; }
+      /* line 39, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .contact-details ul li {
+        margin: 10px 0; }
+        /* line 41, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .contact-details ul li::after {
+          content: '';
+          display: block;
+          background: #e5e5e5;
+          margin: 15px 0;
+          text-align: center;
+          width: 90%;
+          height: 1px; }
+          @media (max-width: 767px) {
+            /* line 41, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+            .contact .container .contact-details ul li::after {
+              margin: 15px auto; } }
+        /* line 54, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .contact-details ul li:last-child::after {
+          width: 0;
+          height: 0; }
+        /* line 59, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .contact-details ul li i {
+          font-size: 18px;
+          margin-right: 30px; }
+        /* line 65, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .contact-details ul li span,
+        .contact .container .contact-details ul li span * {
+          font-family: "OpenSans-Regular";
+          font-size: 15px;
+          color: #000;
+          font-weight: normal; }
+    /* line 73, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+    .contact .container .send-message {
+      width: 50%;
+      text-align: center;
+      /* Todos inputs menos o botão submit */ }
+      @media (max-width: 640px) {
+        /* line 73, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+        .contact .container .send-message {
+          width: 100%; } }
+      /* line 79, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .send-message textarea {
+        height: 165px; }
+      /* line 83, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .send-message input:not([type="submit"]),
+      .contact .container .send-message textarea {
+        font-family: "OpenSans-Regular";
+        font-size: 13px;
+        color: #000;
+        font-weight: normal;
+        line-height: 40px;
+        padding-left: 20px;
+        width: 100%;
+        margin: 20px 0;
+        outline: 0;
+        border: none;
+        border-bottom: 1px solid #e5e5e5; }
+      /* line 94, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .send-message input:focus,
+      .contact .container .send-message textarea:focus {
+        font-family: "OpenSans-Regular";
+        font-size: 13px;
+        color: #000;
+        font-weight: normal; }
+      /* line 98, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+      .contact .container .send-message input:not([type="submit"]) {
+        line-height: 40px;
+        padding-left: 20px; }
+
+/* line 106, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_contact.scss */
+.align-fix {
+  margin-left: 3px; }
+
+/* line 1, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+.hero {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  /* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+  .hero .mask-hero {
+    background-image: url(../images/hero.jpg);
+    background-color: red;
+    background-position: center center;
+    background-size: cover;
+    -webkit-filter: brightness(50%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0; }
+  /* line 19, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+  .hero .wrapper-hero {
+    z-index: 5;
+    width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    text-align: center; }
+    /* line 26, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+    .hero .wrapper-hero h1 {
+      background-color: red;
+      display: inline-block;
+      line-height: 30px;
+      margin: 20px 0;
+      padding: 20px; }
+    /* line 33, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+    .hero .wrapper-hero h2 {
+      color: #fff;
+      margin: 10px 0; }
+    /* line 37, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+    .hero .wrapper-hero .btn {
+      margin: 40px 0; }
+  /* line 41, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+  .hero .hero-down {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    z-index: 4;
+    position: absolute;
+    color: #cecece;
+    animation: hero-down 2s infinite;
+    cursor: pointer;
+    padding: 20px; }
+  /* line 53, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_hero.scss */
+  .hero #hero-end {
+    position: absolute;
+    bottom: 0; }
+
+@-webkit-keyframes hero-down {
+  0% {
+    bottom: 30px; }
+  50% {
+    bottom: 50px; }
+  100% {
+    bottom: 30px; } }
+
+@keyframes hero-down {
+  0% {
+    bottom: 30px; }
+  50% {
+    bottom: 50px; }
+  100% {
+    bottom: 30px; } }
+
+/* line 2, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+.portfolio ul {
+  overflow: hidden;
+  text-align: center; }
+  /* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+  .portfolio ul li {
+    line-height: 100px;
+    display: inline-block;
+    padding: 0 20px;
+    text-transform: uppercase;
+    color: red;
+    cursor: pointer; }
+    /* line 12, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .portfolio ul li:hover {
+      color: blue; }
+
+/* line 17, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+.portfolio .article-wrapper {
+  width: 100%;
+  height: 80%;
+  overflow: hidden; }
+  /* line 21, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+  .portfolio .article-wrapper article {
+    width: 25%;
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+    transform: transale3d(0, 0, 0); }
+    /* line 27, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .portfolio .article-wrapper article:before {
+      padding-top: 100%;
+      display: block;
+      content: ''; }
+    /* line 33, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .portfolio .article-wrapper article:hover .subtitle {
+      max-height: 110px; }
+    /* line 36, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .portfolio .article-wrapper article:hover img {
+      top: -1000px;
+      -webkit-filter: brightness(50%); }
+    /* line 41, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .portfolio .article-wrapper article figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+      /* line 47, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .portfolio .article-wrapper article figure img {
+        position: relative;
+        width: 100%;
+        top: 0;
+        transform: transale3d(0, 0, 0);
+        transition: top 5s ease-in-out, -webkit-filter 0.4s ease-in-out; }
+      /* line 54, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .portfolio .article-wrapper article figure .subtitle {
+        max-height: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        background-color: #fff;
+        border-top: 5px solid rgba(0, 0, 0, 0.8);
+        box-sizing: content-box;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out; }
+        /* line 65, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+        .portfolio .article-wrapper article figure .subtitle h3 {
+          padding: 10px;
+          margin: 0; }
+        /* line 69, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+        .portfolio .article-wrapper article figure .subtitle p {
+          padding: 10px 10px;
+          margin: 0;
+          margin-bottom: 5px; }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      /* line 21, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .portfolio .article-wrapper article {
+        width: 50%; } }
+    @media (min-width: 513px) and (max-width: 768px) {
+      /* line 21, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .portfolio .article-wrapper article {
+        width: 50%; } }
+    @media (min-width: 0px) and (max-width: 512px) {
+      /* line 21, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .portfolio .article-wrapper article {
+        width: 100%; } }
+
+/* line 90, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+.popupPortfolio {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 999; }
+  /* line 98, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+  .popupPortfolio > * {
+    display: none;
+    height: 100%; }
+  /* line 102, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+  .popupPortfolio .popup-esq {
+    width: 50%;
+    float: left; }
+    /* line 105, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .popupPortfolio .popup-esq img {
+      width: 100%; }
+    @media (min-width: 0px) and (max-width: 512px) {
+      /* line 102, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .popupPortfolio .popup-esq {
+        width: 100%;
+        height: 50%; } }
+  /* line 113, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+  .popupPortfolio .popup-dir {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #fff; }
+    /* line 118, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .popupPortfolio .popup-dir .wrapper-pop-text {
+      width: 80%;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      top: 50%; }
+      /* line 123, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .popupPortfolio .popup-dir .wrapper-pop-text * {
+        padding: 20px 0; }
+      /* line 126, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .popupPortfolio .popup-dir .wrapper-pop-text .popup-tags {
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece; }
+    /* line 131, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+    .popupPortfolio .popup-dir span {
+      cursor: pointer;
+      position: absolute;
+      top: 40px;
+      right: 50px;
+      font-size: 20px; }
+    @media (min-width: 0px) and (max-width: 512px) {
+      /* line 113, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_portfolio.scss */
+      .popupPortfolio .popup-dir {
+        width: 100%;
+        height: 50%;
+        font-size: 12px; } }
+
+/* line 1, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+.pros {
+  width: 100%;
+  background: #f6f6f6; }
+  /* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+  .pros .container article {
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      /* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+      .pros .container article {
+        border-bottom: 1px solid #e5e5e5; }
+        /* line 11, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+        .pros .container article:nth-child(2) {
+          border-right: none; } }
+    @media (max-width: 767px) {
+      /* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+      .pros .container article {
+        border-bottom: 1px solid #e5e5e5; } }
+    /* line 19, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+    .pros .container article:last-child {
+      border-right: none; }
+    /* line 22, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+    .pros .container article div {
+      padding: 0;
+      margin: 0 10px;
+      margin-top: 60px;
+      margin-bottom: 80px;
+      text-align: center; }
+      /* line 28, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+      .pros .container article div i {
+        padding-bottom: 30px; }
+      /* line 31, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+      .pros .container article div h1 {
+        font-family: "Oswald-Light";
+        font-size: 28px;
+        color: #373737;
+        font-weight: normal;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding-bottom: 15px; }
+      /* line 37, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_pros.scss */
+      .pros .container article div p {
+        line-height: 160%;
+        font-family: "OpenSans-Regular";
+        font-size: 14px;
+        color: #5e5e5e;
+        font-weight: normal;
+        letter-spacing: 1px; }
+
+/* line 1, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_quote.scss */
+.quote {
+  width: 100%;
+  background: #f6f6f6; }
+  /* line 5, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_quote.scss */
+  .quote .container div {
+    margin: 0 auto;
+    padding: 50px 0; }
+    /* line 9, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_quote.scss */
+    .quote .container div h1 {
+      margin: 0 auto;
+      font-family: "Oswald-Regular";
+      font-size: 28px;
+      color: #373737;
+      font-weight: normal;
+      text-transform: none;
+      text-align: center;
+      padding-bottom: 40px; }
+    /* line 17, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_quote.scss */
+    .quote .container div a {
+      display: block;
+      text-align: center; }
+
+/* line 1, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+.title-subtitle {
+  background: #f6f6f6;
+  overflow: hidden; }
+  /* line 4, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+  .title-subtitle .container {
+    border-bottom: 1px solid #e5e5e5; }
+    /* line 8, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+    .title-subtitle .container .left-block,
+    .title-subtitle .container .right-block {
+      display: inline-block; }
+    /* line 11, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+    .title-subtitle .container .left-block {
+      border-right: 1px solid #e5e5e5; }
+      /* line 13, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+      .title-subtitle .container .left-block h1 {
+        font-family: "Oswald-Light";
+        font-size: 90px;
+        color: #373737;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center; }
+        @media (min-width: 768px) and (max-width: 991px) {
+          /* line 13, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+          .title-subtitle .container .left-block h1 {
+            font-size: 75px;
+            padding-top: 5px;
+            padding-right: 30px; } }
+        @media (max-width: 767px) {
+          /* line 13, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+          .title-subtitle .container .left-block h1 {
+            font-size: 65px;
+            margin: 0;
+            padding: 20px 0;
+            padding-top: 40px; } }
+    /* line 33, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+    .title-subtitle .container .right-block h2 {
+      padding-left: 40px;
+      padding-top: 80px;
+      width: 100%;
+      font-family: "OpenSans-Regular";
+      font-size: 18px;
+      color: #5e5e5e;
+      font-weight: normal;
+      text-align: left; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        /* line 33, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+        .title-subtitle .container .right-block h2 {
+          padding-top: 40px; } }
+      @media (max-width: 767px) and (min-width: 641px) {
+        /* line 33, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+        .title-subtitle .container .right-block h2 {
+          padding: 20px 0;
+          text-align: center; } }
+      @media (max-width: 640px) {
+        /* line 33, C:/Users/andre/Documents/the_odin_project/PG-Freela/scss/modules/_title-subtitle.scss */
+        .title-subtitle .container .right-block h2 {
+          margin: 0;
+          padding: 20px 0;
+          text-align: center; } }
+
+/*# sourceMappingURL=main.css.map */
